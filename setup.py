@@ -17,5 +17,10 @@ setup(
     author_email='example@example.com',
     # You can specify install_requires if setuptools is installed
     # install_requires=['termcolor==1.1.0'],
-    long_description=open('README.txt').read(),
+    long_description=open('README.md').read(),
+    entry_points={
+        'console_scripts': [
+            'robot_python=roboter.controller.conversation:talk_about_restaurant'
+        ],
+    },
 )
